@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio — PYRCZAK Noah</title>
+  <meta name="description" content="Portfolio professionnel BTS SIO" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav id="navbar">
+    <a href="#accueil" class="nav-logo">NP</a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#accueil">Accueil</a></li>
+      <li><a href="#apropos">À propos</a></li>
+      <li><a href="#realisations">Réalisations Professionnelles</a></li>
+      <li><a href="#stages">Stages</a></li>
+      <li><a href="#veille">Veille</a></li>
+      <li><a href="#certifications">Certifications</a></li>
+      <li><a href="#documents">Documents</a></li>
+    </ul>
+    <button class="nav-burger" id="navBurger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- HERO -->
+  <section id="accueil">
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+
+    <div class="hero-left">
+      <p class="hero-greeting">Bienvenue sur mon portfolio</p>
+      <h1 class="hero-name">
+        Noah
+        <span class="gradient-text">PYRCZAK</span>
+      </h1>
+      <p class="hero-title">Étudiant BTS SIO &middot; SISR</p>
+      <p class="hero-desc">
+        Passionné par l'informatique et les réseaux, je construis des solutions
+        numériques robustes et élégantes. Actuellement en BTS SIO option SISR au
+        lycée Gustave Eiffel à Bordeaux, je transforme chaque défi technique en
+        opportunité concrète.
+      </p>
+      <div class="hero-cta">
+        <a href="#realisations" class="btn-primary">Voir mes réalisations professionnelles</a>
+        <a href="#documents" class="btn-ghost">Voir mon CV</a>
+      </div>
+    </div>
+
+    <div class="hero-right">
+      <div class="hero-card">
+        <div class="hero-card-inner">
+          <div class="hero-avatar">
+            <img src="PP-Portefolio.PNG" alt="Photo de profil Noah Pyrczak" />
+          </div>
+          <div>
+            <p style="font-family:var(--font-display);font-size:1.4rem;font-weight:400;text-align:center;">Noah Pyrczak</p>
+            <p style="font-family:var(--font-mono);font-size:0.72rem;color:var(--text-faint);text-align:center;letter-spacing:0.1em;margin-top:0.3rem;">BTS SIO &middot; SISR</p>
+          </div>
+          <div class="tag-list" style="justify-content:center;">
+            <span class="tag accent">JavaScript</span>
+            <span class="tag accent">PHP</span>
+            <span class="tag accent">Python</span>
+            <span class="tag accent">Virtualisation</span>
+            <span class="tag accent">HTML / CSS</span>
+          </div>
+          <div class="hero-stats">
+            <div class="stat-item">
+              <span class="stat-value">12</span>
+              <span class="stat-label">Projets</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-value">2</span>
+              <span class="stat-label">Stages</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-value">4</span>
+              <span class="stat-label">Certifs</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- À PROPOS -->
+  <section id="apropos">
+    <div class="reveal">
+      <p class="section-label">Qui suis-je</p>
+      <h2 class="section-title">À <em>propos</em> de moi</h2>
+    </div>
+    <div class="apropos-grid">
+      <div class="apropos-sticky reveal">
+        <div class="apropos-photo-frame">
+          <div class="apropos-photo-placeholder">&#x1F9D1;&#x200D;&#x1F4BB;</div>
+        </div>
+        <div class="tag-list" style="margin-top:1.5rem;">
+          <span class="tag accent">JavaScript</span>
+          <span class="tag accent">PHP / Laravel</span>
+          <span class="tag accent">Python</span>
+          <span class="tag">MySQL</span>
+          <span class="tag">React</span>
+          <span class="tag">HTML / CSS</span>
+          <span class="tag">Git</span>
+          <span class="tag">Linux</span>
+          <span class="tag">Réseau</span>
+        </div>
+        <div class="skill-bar-list" style="margin-top:2rem;">
+          <div class="skill-bar-item">
+            <div class="skill-bar-header">
+              <span class="skill-bar-name">Développement Web</span>
+              <span class="skill-bar-pct">85%</span>
+            </div>
+            <div class="skill-bar-track"><div class="skill-bar-fill" data-pct="85"></div></div>
+          </div>
+          <div class="skill-bar-item">
+            <div class="skill-bar-header">
+              <span class="skill-bar-name">Bases de données</span>
+              <span class="skill-bar-pct">75%</span>
+            </div>
+            <div class="skill-bar-track"><div class="skill-bar-fill" data-pct="75"></div></div>
+          </div>
+          <div class="skill-bar-item">
+            <div class="skill-bar-header">
+              <span class="skill-bar-name">Réseau / Système</span>
+              <span class="skill-bar-pct">75%</span>
+            </div>
+            <div class="skill-bar-track"><div class="skill-bar-fill" data-pct="75"></div></div>
+          </div>
+          <div class="skill-bar-item">
+            <div class="skill-bar-header">
+              <span class="skill-bar-name">Cybersécurité</span>
+              <span class="skill-bar-pct">80%</span>
+            </div>
+            <div class="skill-bar-track"><div class="skill-bar-fill" data-pct="80"></div></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="apropos-content reveal">
+        <p>Je suis <strong>Noah PYRCZAK</strong>, étudiant en deuxième année de BTS SIO (Services Informatiques aux Organisations), option SISR au lycée Gustave Eiffel à Bordeaux.</p>
+        <p>Mon parcours m'a amené à développer des compétences solides en développement web, gestion de bases de données, et administration système. Je suis motivé par la création de projets concrets qui répondent à des besoins réels.</p>
+        <p>En dehors du développement, je me tiens informé des dernières tendances technologiques via une <strong>veille informatique</strong> régulière.</p>
+        <div class="skills-grid stagger" style="margin-top:2.5rem;">
+          <div class="skill-card">
+            <div class="skill-card-icon">&#x26A1;</div>
+            <div class="skill-card-name">Développement rapide</div>
+            <div class="skill-card-desc">Prototypage &amp; itération</div>
+          </div>
+          <div class="skill-card">
+            <div class="skill-card-icon">&#x1F9E9;</div>
+            <div class="skill-card-name">Problem solving</div>
+            <div class="skill-card-desc">Analyse &amp; débogage</div>
+          </div>
+          <div class="skill-card">
+            <div class="skill-card-icon">&#x1F91D;</div>
+            <div class="skill-card-name">Travail en équipe</div>
+            <div class="skill-card-desc">Agile / Scrum</div>
+          </div>
+          <div class="skill-card">
+            <div class="skill-card-icon">&#x1F4DA;</div>
+            <div class="skill-card-name">Veille constante</div>
+            <div class="skill-card-desc">Curiosité &amp; autonomie</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RÉALISATIONS  
+  <section id="realisations">
+    <div class="reveal">
+      <p class="section-label">Projets réalisés</p>
+      <h2 class="section-title">Réalisations <em>professionnelles</em></h2>
+    </div>
+    <div class="realisations-grid stagger">
+
+      
+      <div class="realisation-card">
+        <div class="realisation-card-header"><div class="card-glow"></div><span>&#x1F6D2;</span></div>
+        <div class="realisation-card-body">
+          <div class="card-meta"><span class="card-badge badge-blue">Web</span><span class="card-date">2024</span></div>
+          <h3 class="card-title">Site E-commerce</h3>
+          <p class="card-desc">Développement complet d'une boutique en ligne avec gestion des produits, panier, commandes et espace administrateur. Interface responsive et sécurisée.</p>
+          <div class="card-tech"><span class="tech-pill">PHP</span><span class="tech-pill">MySQL</span><span class="tech-pill">JavaScript</span><span class="tech-pill">CSS</span></div>
+          <a href="projet.html?id=ecommerce" class="btn-fiche">&#x1F4C4; Voir la fiche projet</a>
+        </div>
+      </div>
+
+      
+      <div class="realisation-card">
+        <div class="realisation-card-header"><div class="card-glow"></div><span>&#x1F4CB;</span></div>
+        <div class="realisation-card-body">
+          <div class="card-meta"><span class="card-badge badge-purple">Application</span><span class="card-date">2024</span></div>
+          <h3 class="card-title">Gestion de Tâches Kanban</h3>
+          <p class="card-desc">Application web de gestion de projet avec tableau Kanban, assignation des tâches, suivi du temps et notifications en temps réel via WebSocket.</p>
+          <div class="card-tech"><span class="tech-pill">React</span><span class="tech-pill">Node.js</span><span class="tech-pill">PostgreSQL</span><span class="tech-pill">Socket.io</span></div>
+          <a href="projet.html?id=kanban" class="btn-fiche">&#x1F4C4; Voir la fiche projet</a>
+        </div>
+      </div>
+
+      
+      <div class="realisation-card">
+        <div class="realisation-card-header"><div class="card-glow"></div><span>&#x1F510;</span></div>
+        <div class="realisation-card-body">
+          <div class="card-meta"><span class="card-badge badge-green">Sécurité</span><span class="card-date">2023</span></div>
+          <h3 class="card-title">Audit de Sécurité Réseau</h3>
+          <p class="card-desc">Analyse des vulnérabilités d'une infrastructure réseau d'entreprise. Rapport complet avec recommandations, tests de pénétration et solutions correctives.</p>
+          <div class="card-tech"><span class="tech-pill">Nmap</span><span class="tech-pill">Wireshark</span><span class="tech-pill">Kali Linux</span><span class="tech-pill">OWASP</span></div>
+          <a href="projet.html?id=audit" class="btn-fiche">&#x1F4C4; Voir la fiche projet</a>
+        </div>
+      </div>
+
+      
+      <div class="realisation-card">
+        <div class="realisation-card-header"><div class="card-glow"></div><span>&#x1F4CA;</span></div>
+        <div class="realisation-card-body">
+          <div class="card-meta"><span class="card-badge badge-gold">Dashboard</span><span class="card-date">2023</span></div>
+          <h3 class="card-title">Dashboard Analytics PME</h3>
+          <p class="card-desc">Tableau de bord de visualisation de données pour une PME : graphiques interactifs, KPI en temps réel, exports et système d'alertes configurables.</p>
+          <div class="card-tech"><span class="tech-pill">Python</span><span class="tech-pill">Django</span><span class="tech-pill">Chart.js</span><span class="tech-pill">SQLite</span></div>
+          <a href="projet.html?id=dashboard" class="btn-fiche">&#x1F4C4; Voir la fiche projet</a>
+        </div>
+      </div>
+
+      
+      <div class="realisation-card">
+        <div class="realisation-card-header"><div class="card-glow"></div><span>&#x1F4F1;</span></div>
+        <div class="realisation-card-body">
+          <div class="card-meta"><span class="card-badge badge-blue">Mobile</span><span class="card-date">2024</span></div>
+          <h3 class="card-title">Application Mobile BDE</h3>
+          <p class="card-desc">Application mobile pour le Bureau Des Étudiants : gestion des événements, billetterie en ligne, fil d'actualités et notifications push.</p>
+          <div class="card-tech"><span class="tech-pill">React Native</span><span class="tech-pill">Firebase</span><span class="tech-pill">Expo</span></div>
+          <a href="projet.html?id=bde" class="btn-fiche">&#x1F4C4; Voir la fiche projet</a>
+        </div>
+      </div>
+
+      
+      <div class="realisation-card">
+        <div class="realisation-card-header"><div class="card-glow"></div><span>&#x1F310;</span></div>
+        <div class="realisation-card-body">
+          <div class="card-meta"><span class="card-badge badge-purple">API</span><span class="card-date">2024</span></div>
+          <h3 class="card-title">API REST - Gestion RH</h3>
+          <p class="card-desc">Conception d'une API RESTful pour un module de gestion des ressources humaines : congés, fiches de paie, organigramme. Documentation Swagger complète.</p>
+          <div class="card-tech"><span class="tech-pill">Laravel</span><span class="tech-pill">MySQL</span><span class="tech-pill">JWT</span><span class="tech-pill">Swagger</span></div>
+          <a href="projet.html?id=api-rh" class="btn-fiche">&#x1F4C4; Voir la fiche projet</a>
+        </div>
+      </div>
+
+    </div>
+  </section> 
+ -->
+
+  <!-- STAGES -->
+  <section id="stages">
+    <div class="reveal">
+      <p class="section-label">Expériences en entreprise</p>
+      <h2 class="section-title">Mes <em>stages</em></h2>
+    </div>
+    <div class="timeline">
+
+      <!-- Stage 1 — CIMPA -->
+      <div class="timeline-item reveal">
+        <div class="timeline-dot"></div>
+        <div class="timeline-card">
+          <p class="timeline-period">Mai - Juin 2025 &middot; 6 semaines</p>
+          <h3 class="timeline-title">Développeur Web Stagiaire</h3>
+          <p class="timeline-company">CIMPA - Sopra Steria &mdash; Saint-Aubin de Médoc, France</p>
+          <p class="timeline-desc">Stage de fin de première année au sein de la DSI d'une entreprise spécialisée dans l'ingénierie. Intégré à une équipe de développeurs, participation active au développement d'un nouvel intranet.</p>
+          <div class="timeline-missions">
+            <div class="timeline-mission">Développement de modules PHP pour la gestion des stocks</div>
+            <div class="timeline-mission">Création d'interfaces utilisateurs HTML / CSS / JS</div>
+            <div class="timeline-mission">Développement de programmes en PowerShell</div>
+            <div class="timeline-mission">Participation aux réunions Agile hebdomadaires</div>
+          </div>
+          <div class="tag-list" style="margin-top:1.2rem;">
+            <span class="tag">PHP</span><span class="tag">MySQL</span><span class="tag">HTML / CSS</span><span class="tag">PowerShell</span>
+          </div>
+          <div class="timeline-pdf-section">
+            <a href="projet.html?id=stage-cimpa" class="btn-fiche" style="margin-top:1.2rem;">&#x1F4C4; Voir la fiche de stage</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Stage 2 — INRAE -->
+      <div class="timeline-item reveal">
+        <div class="timeline-dot" style="border-color:var(--accent2);box-shadow:0 0 0 4px rgba(14,165,233,0.15);"></div>
+        <div class="timeline-card">
+          <p class="timeline-period">Janvier - Mars 2026 &middot; 8 semaines</p>
+          <h3 class="timeline-title">Informaticien de Proximité</h3>
+          <p class="timeline-company">INRAE &mdash; Avignon, France</p>
+          <p class="timeline-desc">Stage de deuxième année au sein d'un organisme de recherche et développement biologique spécialisé dans l'étude des abeilles.</p>
+          <div class="timeline-missions">
+            <div class="timeline-mission">Configuration de NAS</div>
+            <div class="timeline-mission">Mise en place d'une solution d'isolement réseau à l'aide d'un NanoPi</div>
+            <div class="timeline-mission">Assistance aux utilisateurs</div>
+            <div class="timeline-mission">Configuration intégrale de postes utilisateurs (installation Windows 11, logiciels...)</div>
+          </div>
+          <div class="tag-list" style="margin-top:1.2rem;">
+            <span class="tag">IP</span><span class="tag">Réseau</span><span class="tag">Support</span><span class="tag">NAS</span>
+          </div>
+          <div class="timeline-pdf-section">
+            <a href="projet.html?id=stage-inrae" class="btn-fiche" style="margin-top:1.2rem;">&#x1F4C4; Voir la fiche de stage</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- VEILLE -->
+  <section id="veille">
+    <div class="reveal">
+      <p class="section-label">Intelligence technologique</p>
+      <h2 class="section-title">Veille <em>informatique</em></h2>
+    </div>
+    <div class="veille-layout">
+
+      <div class="veille-intro reveal">
+        <p>La veille informatique est au cœur de ma pratique en BTS SIO. Elle me permet de suivre l'évolution des technologies et de relier les sujets d'actualité à mes apprentissages en réseau et systèmes.</p>
+        <p>Réalisée lors de mon stage chez <strong>CIMPA &ndash; Sopra Steria</strong>, voici ma fiche de veille sur le Cloud Gaming, un sujet directement lié aux infrastructures réseau.</p>
+
+        <div class="veille-main-card">
+          <div class="veille-main-card-header">
+            <span class="badge">Semaine 4 &mdash; Stage CIMPA</span>
+            <h3>&#x1F3AE; L'évolution du Cloud Gaming</h3>
+            <p>Technologies, enjeux &amp; avenir &mdash; Noah PYRCZAK</p>
+          </div>
+          <div class="veille-main-card-body">
+
+            <div class="veille-section">
+              <p class="veille-section-title">Définition</p>
+              <p>Le Cloud Gaming permet de jouer à des jeux vidéo via Internet sans puissance locale. Le traitement graphique est déporté sur des serveurs distants, le joueur recevant un flux vidéo interactif.</p>
+            </div>
+
+            <div class="veille-section">
+              <p class="veille-section-title">Principales plateformes (2025)</p>
+              <div class="veille-platforms">
+                <span class="platform-tag">Xbox Cloud Gaming</span>
+                <span class="platform-tag">NVIDIA GeForce NOW</span>
+                <span class="platform-tag">Amazon Luna</span>
+                <span class="platform-tag">Shadow PC</span>
+                <span class="platform-tag">PS+ Premium</span>
+              </div>
+            </div>
+
+            <div class="veille-section">
+              <p class="veille-section-title">Avantages technologiques</p>
+              <ul class="veille-list">
+                <li>Accès aux jeux récents sans matériel coûteux</li>
+                <li>Compatible PC bas de gamme, tablettes, téléphones</li>
+                <li>Expérience unifiée entre plateformes</li>
+                <li>Mises à jour automatiques côté serveur</li>
+              </ul>
+            </div>
+
+            <div class="veille-section">
+              <p class="veille-section-title">Limites &amp; critiques</p>
+              <ul class="veille-list">
+                <li>Dépendance à une connexion stable (ping, latence, débit)</li>
+                <li>Risques de piratage des comptes (accès cloud = accès total)</li>
+                <li>Surcharge des serveurs aux heures de pointe</li>
+                <li>DRM imposés, peu de contrôle sur les fichiers de jeu</li>
+              </ul>
+            </div>
+
+            <div class="veille-section">
+              <p class="veille-section-title">Menaces cybersécurité</p>
+              <ul class="veille-list">
+                <li>Piratage de comptes Steam / Shadow / GeForce NOW</li>
+                <li>Usurpation d'identité via services Microsoft / Google</li>
+                <li>Attaques indirectes sur les sauvegardes cloud</li>
+              </ul>
+            </div>
+
+            <div class="veille-section">
+              <p class="veille-section-title">Sources</p>
+              <div class="veille-sources">
+                <a href="https://www.reddit.com/r/CloudGaming/" target="_blank" rel="noopener" class="veille-source-link">Reddit /r/CloudGaming &#x2197;</a>
+                <a href="https://www.jeuxvideo.com/news/1851739/le-cloud-gaming-menace-reelle.htm" target="_blank" rel="noopener" class="veille-source-link">jeuxvideo.com &#x2197;</a>
+                <a href="https://www.gamekult.com/actualite/le-cloud-gaming-decolle-3050838305.html" target="_blank" rel="noopener" class="veille-source-link">Gamekult &#x2197;</a>
+                <a href="https://shadow.tech" target="_blank" rel="noopener" class="veille-source-link">Shadow PC &#x2197;</a>
+                <a href="https://www.nvidia.com/fr-fr/geforce-now/" target="_blank" rel="noopener" class="veille-source-link">GeForce NOW &#x2197;</a>
+              </div>
+            </div>
+
+            <div class="veille-analysis">
+              <strong>&#x1F4AC; Mon analyse :</strong> En tant que futur technicien systèmes/réseaux, le Cloud Gaming illustre parfaitement la décentralisation des ressources. Il m'aide à comprendre l'importance de l'infrastructure réseau (latence, bande passante, CDN). La gestion de serveurs distants et la sécurité des comptes sont des sujets directement liés au BTS SIO SISR.
+            </div>
+
+            <div style="margin-top:1.5rem;">
+              <a class="pdf-link" href="veille/Veille_CloudGaming_PYRCZAK_Noah.pdf" target="_blank" rel="noopener">&#x1F4C4; Voir la fiche de veille complète (PDF)</a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="veille-cards-col reveal">
+        <div class="veille-categories stagger">
+          <div class="veille-cat"><span class="veille-cat-icon">&#x1F3AE;</span><span class="veille-cat-name">Cloud Gaming</span><span class="veille-cat-count">1 fiche</span></div>
+          <div class="veille-cat"><span class="veille-cat-icon">&#x1F510;</span><span class="veille-cat-name">Cybersécurité</span><span class="veille-cat-count">En cours</span></div>
+          <div class="veille-cat"><span class="veille-cat-icon">&#x2601;&#xFE0F;</span><span class="veille-cat-name">Cloud &amp; DevOps</span><span class="veille-cat-count">En cours</span></div>
+          <div class="veille-cat"><span class="veille-cat-icon">&#x1F916;</span><span class="veille-cat-name">Intelligence Artificielle</span><span class="veille-cat-count">En cours</span></div>
+        </div>
+
+        <div class="veille-cards stagger" style="margin-top:2rem;">
+          <div class="veille-card">
+            <p class="veille-card-date">2025 &mdash; Cloud Gaming</p>
+            <h4 class="veille-card-title">Impact sur le matériel classique</h4>
+            <p class="veille-card-desc">Le cloud gaming pourrait réduire le besoin de consoles haut de gamme, remettant en question le modèle classique. Sony et Microsoft s'adaptent avec des abonnements hybrides.</p>
+          </div>
+          <div class="veille-card">
+            <p class="veille-card-date">2025 &mdash; Réseau</p>
+            <h4 class="veille-card-title">Latence et QoS : les défis infrastructure</h4>
+            <p class="veille-card-desc">La qualité de service est le premier frein au cloud gaming. Les CDN et la fibre optique jouent un rôle central — sujet directement lié aux cours de réseau du BTS SIO SISR.</p>
+          </div>
+          <div class="veille-card">
+            <p class="veille-card-date">2025 &mdash; Sécurité</p>
+            <h4 class="veille-card-title">Sécurité des comptes cloud gaming</h4>
+            <p class="veille-card-desc">Le piratage de comptes sur Shadow PC ou GeForce NOW donne accès à l'intégralité de la bibliothèque. L'authentification à deux facteurs (2FA) devient indispensable.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CERTIFICATIONS -->
+  <section id="certifications">
+    <div class="reveal">
+      <p class="section-label">Compétences certifiées</p>
+      <h2 class="section-title">Mes <em>certifications</em></h2>
+    </div>
+    <div class="documents-grid stagger">
+
+      <div class="doc-card">
+        <div class="doc-icon">&#x1F6E1;&#xFE0F;</div>
+        <h3 class="doc-title">SecNumAcadémie</h3>
+        <p class="doc-desc">Certification délivrée par l'ANSSI — Agence Nationale de la Sécurité des Systèmes d'Information. Formation aux fondamentaux de la cybersécurité.</p>
+        <a class="pdf-link" href="certifications/certif-secnumacademie.pdf" target="_blank" rel="noopener">&#x1F4C4; Ouvrir le certificat (PDF)</a>
+        <a href="certifications/certif-secnumacademie.pdf" download class="btn-ghost" style="width:100%;justify-content:center;margin-top:0.5rem;">&#x2193; Télécharger</a>
+      </div>
+
+      <div class="doc-card">
+        <div class="doc-icon">&#x2601;&#xFE0F;</div>
+        <h3 class="doc-title">Microsoft Azure</h3>
+        <p class="doc-desc">Certification Microsoft Azure — maîtrise des services cloud, virtualisation, gestion des ressources et déploiement d'infrastructures dans le cloud.</p>
+        <a class="pdf-link" href="certifications/certif-azure.pdf" target="_blank" rel="noopener">&#x1F4C4; Ouvrir le certificat (PDF)</a>
+        <a href="certifications/certif-azure.pdf" download class="btn-ghost" style="width:100%;justify-content:center;margin-top:0.5rem;">&#x2193; Télécharger</a>
+      </div>
+
+      <div class="doc-card">
+        <div class="doc-icon">&#x1F4CB;</div>
+        <h3 class="doc-title">CNIL</h3>
+        <p class="doc-desc">Attestation de formation CNIL — connaissance du RGPD, protection des données personnelles et bonnes pratiques légales en matière de traitement de l'information.</p>
+        <a class="pdf-link" href="certifications/certif-cnil.pdf" target="_blank" rel="noopener">&#x1F4C4; Ouvrir le certificat (PDF)</a>
+        <a href="certifications/certif-cnil.pdf" download class="btn-ghost" style="width:100%;justify-content:center;margin-top:0.5rem;">&#x2193; Télécharger</a>
+      </div>
+
+      <div class="doc-card">
+        <div class="doc-icon">&#x2B50;</div>
+        <h3 class="doc-title">PIX</h3>
+        <p class="doc-desc">Certification PIX — évaluation et validation des compétences numériques selon le référentiel européen DigComp.</p>
+        <a class="pdf-link" href="certifications/certif-pix.pdf" target="_blank" rel="noopener">&#x1F4C4; Ouvrir le certificat (PDF)</a>
+        <a href="certifications/certif-pix.pdf" download class="btn-ghost" style="width:100%;justify-content:center;margin-top:0.5rem;">&#x2193; Télécharger</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- DOCUMENTS -->
+  <section id="documents">
+    <div class="reveal">
+      <p class="section-label">Téléchargements</p>
+      <h2 class="section-title">Mes <em>documents</em></h2>
+    </div>
+    <div class="documents-grid stagger">
+
+      <div class="doc-card">
+        <div class="doc-icon">&#x1F4CB;</div>
+        <h3 class="doc-title">Curriculum Vitæ</h3>
+        <p class="doc-desc">Mon CV complet au format PDF — formations, expériences et compétences.</p>
+        <a class="pdf-link" href="documents/PYRCZAK.pdf" target="_blank" rel="noopener">&#x1F4C4; Ouvrir le CV (PDF)</a>
+        <a href="documents/PYRCZAK.pdf" download class="btn-ghost" style="width:100%;justify-content:center;margin-top:0.5rem;">&#x2193; Télécharger</a>
+      </div>
+
+      <div class="doc-card">
+        <div class="doc-icon">&#x1F3C6;</div>
+        <h3 class="doc-title">Attestations de Stage</h3>
+        <p class="doc-desc">Attestations et certificats délivrés par mes entreprises d'accueil.</p>
+        <a class="pdf-link" href="documents/attestations-stage.pdf" target="_blank" rel="noopener">&#x1F4C4; Ouvrir l'attestation (PDF)</a>
+        <a href="documents/attestations-stage.pdf" download class="btn-ghost" style="width:100%;justify-content:center;margin-top:0.5rem;">&#x2193; Télécharger</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <span class="footer-logo">NP.</span>
+    <span class="footer-copy">&copy; 2025 Noah PYRCZAK &middot; BTS SIO SISR &middot; Tous droits réservés</span>
+    <div class="footer-socials">
+      <a href="https://github.com" class="footer-social" target="_blank" rel="noopener" title="GitHub">&#x1F431;</a>
+      <a href="https://linkedin.com" class="footer-social" target="_blank" rel="noopener" title="LinkedIn">&#x1F4BC;</a>
+      <a href="mailto:ton.email@exemple.com" class="footer-social" title="Email">&#x2709;&#xFE0F;</a>
+    </div>
+  </footer>
+
+  <script>
+  /* Burger */
+  document.getElementById('navBurger').addEventListener('click', () =>
+    document.getElementById('navLinks').classList.toggle('open'));
+  document.querySelectorAll('.nav-links a').forEach(a =>
+    a.addEventListener('click', () =>
+      document.getElementById('navLinks').classList.remove('open')));
+
+  /* Scroll reveal */
+  const io = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('visible');
+        e.target.querySelectorAll('.skill-bar-fill').forEach(b =>
+          b.style.width = b.dataset.pct + '%');
+      }
+    });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.reveal, .stagger, .timeline-item').forEach(el =>
+    io.observe(el));
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fiche Projet — Noah PYRCZAK</title>
+  <meta name="description" content="Détail du projet — Portfolio Noah PYRCZAK" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav id="navbar">
+    <a href="index.html#accueil" class="nav-logo">NP</a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html#accueil">Accueil</a></li>
+      <li><a href="index.html#apropos">À propos</a></li>
+      <li><a href="index.html#realisations">Réalisations</a></li>
+      <li><a href="index.html#stages">Stages</a></li>
+      <li><a href="index.html#veille">Veille</a></li>
+      <li><a href="index.html#certifications">Certifications</a></li>
+      <li><a href="index.html#documents">Documents</a></li>
+    </ul>
+    <button class="nav-burger" id="navBurger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- PAGE -->
+  <div class="projet-page">
+
+    <div class="breadcrumb">
+      <a href="index.html">Portfolio</a>
+      <span class="breadcrumb-sep">/</span>
+      <span id="breadcrumbSection">Réalisations</span>
+      <span class="breadcrumb-sep">/</span>
+      <span id="breadcrumbTitle">Projet</span>
+    </div>
+
+    <div class="projet-hero">
+      <div class="projet-hero-inner">
+        <span class="projet-hero-badge" id="heroBadge">Web</span>
+        <span class="projet-hero-icon" id="heroIcon">🛒</span>
+        <h1 id="heroTitle">Nom du projet</h1>
+        <p class="projet-hero-desc" id="heroDesc">Description.</p>
+        <div class="projet-hero-meta" id="heroMeta"></div>
+      </div>
+    </div>
+
+    <div class="projet-body">
+
+      <div class="projet-main">
+
+        <div class="projet-section">
+          <p class="projet-section-title">Présentation</p>
+          <div id="descriptionContent"></div>
+        </div>
+
+        <div class="projet-section">
+          <p class="projet-section-title">Missions réalisées</p>
+          <ul class="projet-missions" id="missionsContent"></ul>
+        </div>
+
+        <div class="pdf-zone">
+          <div class="pdf-zone-header">
+            <span class="pdf-zone-title">Documents PDF</span>
+            <a href="index.html" class="btn-back">← Retour au portfolio</a>
+          </div>
+          <div id="pdfListContainer"></div>
+        </div>
+
+      </div>
+
+      <aside class="projet-sidebar">
+        <div class="sidebar-card">
+          <p class="sidebar-card-title">Informations</p>
+          <div class="sidebar-info-list" id="sidebarInfos"></div>
+        </div>
+        <div class="sidebar-card">
+          <p class="sidebar-card-title">Technologies</p>
+          <div class="sidebar-tech-list" id="sidebarTech"></div>
+        </div>
+      </aside>
+
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <span class="footer-logo">NP.</span>
+    <span class="footer-copy">&copy; 2025 Noah PYRCZAK &middot; BTS SIO SISR &middot; Tous droits réservés</span>
+    <div class="footer-socials">
+      <a href="https://github.com" class="footer-social" target="_blank" rel="noopener" title="GitHub">&#x1F431;</a>
+      <a href="https://linkedin.com" class="footer-social" target="_blank" rel="noopener" title="LinkedIn">&#x1F4BC;</a>
+      <a href="mailto:ton.email@exemple.com" class="footer-social" title="Email">&#x2709;&#xFE0F;</a>
+    </div>
+  </footer>
+
+  <!-- =====================================================
+
+  STRUCTURE DES DOSSIERS À CRÉER
+  (à la racine, au même niveau que index.html)
+  ─────────────────────────────────────────────────────────
+
+  projets/
+  ├── ecommerce/
+  │   ├── rapport.pdf
+  │   ├── cahier-des-charges.pdf
+  │   ├── annexes.pdf
+  │   └── presentation.pdf
+  ├── kanban/
+  │   ├── rapport.pdf
+  │   ├── cahier-des-charges.pdf
+  │   ├── annexes.pdf
+  │   └── presentation.pdf
+  ├── audit/
+  │   ├── rapport.pdf
+  │   ├── cahier-des-charges.pdf
+  │   ├── annexes.pdf
+  │   └── presentation.pdf
+  ├── dashboard/
+  │   ├── rapport.pdf
+  │   ├── cahier-des-charges.pdf
+  │   ├── annexes.pdf
+  │   └── presentation.pdf
+  ├── bde/
+  │   ├── rapport.pdf
+  │   ├── cahier-des-charges.pdf
+  │   ├── annexes.pdf
+  │   └── presentation.pdf
+  └── api-rh/
+      ├── rapport.pdf
+      ├── cahier-des-charges.pdf
+      ├── annexes.pdf
+      └── presentation.pdf
+
+  stages/
+  ├── cimpa/
+  │   ├── rapport-de-stage.pdf
+  │   ├── attestation.pdf
+  │   ├── semaine1.pdf  →  semaine6.pdf
+  └── inrae/
+      ├── rapport-de-stage.pdf
+      ├── attestation.pdf
+      └── semaine1.pdf  →  semaine8.pdf
+
+  certifications/
+  ├── certif-secnumacademie.pdf
+  ├── certif-azure.pdf
+  ├── certif-cnil.pdf
+  └── certif-pix.pdf
+
+  veille/
+  └── Veille_CloudGaming_PYRCZAK_Noah.pdf
+
+  documents/
+  ├── PYRCZAK_CV.pdf
+  └── attestations-stage.pdf
+
+  ─────────────────────────────────────────────────────────
+  Pour activer un PDF : retire le  //  devant la ligne.
+  ===================================================== -->
+
+  <script>
+  const PROJETS = {
+
+    /* ════════════════════════════════════════════════════
+       RÉALISATIONS PROFESSIONNELLES
+    ════════════════════════════════════════════════════ */
+    /*
+    "ecommerce": {
+      section:  "Réalisations professionnelles",
+      badge:    "Web",
+      icon:     "🛒",
+      title:    "Site E-commerce",
+      desc:     "Développement complet d'une boutique en ligne avec gestion des produits, panier, commandes et espace administrateur. Interface responsive et sécurisée.",
+      descLong: [
+        "Ce projet a été réalisé dans le cadre du BTS SIO. Il s'agit d'un site e-commerce complet permettant la gestion d'un catalogue produits, d'un panier d'achat et d'un système de commande.",
+        "Un espace administrateur sécurisé permet la gestion des stocks, des commandes et des utilisateurs. L'interface est entièrement responsive et compatible mobile."
+      ],
+      missions: [
+        "Conception de la base de données MySQL (produits, commandes, utilisateurs)",
+        "Développement du back-end en PHP (architecture MVC maison)",
+        "Création de l'interface utilisateur HTML / CSS / JavaScript",
+        "Mise en place d'un système d'authentification sécurisé",
+        "Intégration d'un espace administrateur complet"
+      ],
+      tech:     ["PHP", "MySQL", "JavaScript", "CSS", "HTML"],
+      annee:    "2024",
+      duree:    "8 semaines",
+      contexte: "Projet BTS SIO",
+      pdfs: [
+        // { name: "Rapport de projet",       file: "projets/ecommerce/rapport.pdf" },
+        // { name: "Cahier des charges",      file: "projets/ecommerce/cahier-des-charges.pdf" },
+        // { name: "Annexes / captures",      file: "projets/ecommerce/annexes.pdf" },
+        // { name: "Support de présentation", file: "projets/ecommerce/presentation.pdf" },
+      ]
+    },
+
+    "kanban": {
+      section:  "Réalisations professionnelles",
+      badge:    "Application",
+      icon:     "📋",
+      title:    "Gestion de Tâches Kanban",
+      desc:     "Application web de gestion de projet avec tableau Kanban, assignation des tâches, suivi du temps et notifications en temps réel via WebSocket.",
+      descLong: [
+        "Application web de gestion de projet inspirée de Trello. Les utilisateurs peuvent créer des tableaux, des colonnes et des cartes, et les déplacer par drag & drop.",
+        "Les notifications en temps réel sont gérées via Socket.io, permettant une collaboration multi-utilisateurs instantanée."
+      ],
+      missions: [
+        "Développement de l'interface React avec drag & drop natif",
+        "Mise en place du serveur Node.js et de l'API REST",
+        "Intégration de Socket.io pour les mises à jour en temps réel",
+        "Conception du schéma de base de données PostgreSQL",
+        "Gestion des rôles et permissions utilisateurs"
+      ],
+      tech:     ["React", "Node.js", "PostgreSQL", "Socket.io"],
+      annee:    "2024",
+      duree:    "6 semaines",
+      contexte: "Projet BTS SIO",
+      pdfs: [
+        // { name: "Rapport de projet",       file: "projets/kanban/rapport.pdf" },
+        // { name: "Cahier des charges",      file: "projets/kanban/cahier-des-charges.pdf" },
+        // { name: "Annexes / captures",      file: "projets/kanban/annexes.pdf" },
+        // { name: "Support de présentation", file: "projets/kanban/presentation.pdf" },
+      ]
+    },
+
+    "audit": {
+      section:  "Réalisations professionnelles",
+      badge:    "Sécurité",
+      icon:     "🔐",
+      title:    "Audit de Sécurité Réseau",
+      desc:     "Analyse des vulnérabilités d'une infrastructure réseau d'entreprise. Rapport complet avec recommandations, tests de pénétration et solutions correctives.",
+      descLong: [
+        "Audit de sécurité réalisé sur une infrastructure réseau fictive d'entreprise dans le cadre d'un exercice BTS SIO SISR.",
+        "L'audit couvre la cartographie du réseau, l'identification des services exposés, les tests d'intrusion et la rédaction d'un rapport de recommandations OWASP."
+      ],
+      missions: [
+        "Cartographie complète du réseau avec Nmap",
+        "Analyse du trafic réseau avec Wireshark",
+        "Tests de pénétration sur environnement Kali Linux isolé",
+        "Rédaction du rapport d'audit avec recommandations OWASP",
+        "Présentation des résultats et des correctifs proposés"
+      ],
+      tech:     ["Nmap", "Wireshark", "Kali Linux", "OWASP"],
+      annee:    "2023",
+      duree:    "4 semaines",
+      contexte: "Projet BTS SIO SISR",
+      pdfs: [
+        // { name: "Rapport d'audit complet", file: "projets/audit/rapport.pdf" },
+        // { name: "Cahier des charges",      file: "projets/audit/cahier-des-charges.pdf" },
+        // { name: "Annexes / captures",      file: "projets/audit/annexes.pdf" },
+        // { name: "Support de présentation", file: "projets/audit/presentation.pdf" },
+      ]
+    },
+
+    "dashboard": {
+      section:  "Réalisations professionnelles",
+      badge:    "Dashboard",
+      icon:     "📊",
+      title:    "Dashboard Analytics PME",
+      desc:     "Tableau de bord de visualisation de données pour une PME : graphiques interactifs, KPI en temps réel, exports et système d'alertes configurables.",
+      descLong: [
+        "Tableau de bord développé pour permettre à une PME de visualiser ses indicateurs clés de performance (KPI) en temps réel.",
+        "L'application Django expose une API REST consommée par des graphiques Chart.js. Un système d'alertes par e-mail est configurable depuis l'interface d'administration."
+      ],
+      missions: [
+        "Conception et développement de l'application Django",
+        "Intégration des graphiques interactifs avec Chart.js",
+        "Développement du système d'alertes configurable par seuils",
+        "Mise en place des exports CSV et PDF",
+        "Optimisation des requêtes SQLite pour les gros volumes"
+      ],
+      tech:     ["Python", "Django", "Chart.js", "SQLite"],
+      annee:    "2023",
+      duree:    "5 semaines",
+      contexte: "Projet BTS SIO",
+      pdfs: [
+        // { name: "Rapport de projet",       file: "projets/dashboard/rapport.pdf" },
+        // { name: "Cahier des charges",      file: "projets/dashboard/cahier-des-charges.pdf" },
+        // { name: "Annexes / captures",      file: "projets/dashboard/annexes.pdf" },
+        // { name: "Support de présentation", file: "projets/dashboard/presentation.pdf" },
+      ]
+    },
+
+    "bde": {
+      section:  "Réalisations professionnelles",
+      badge:    "Mobile",
+      icon:     "📱",
+      title:    "Application Mobile BDE",
+      desc:     "Application mobile pour le Bureau Des Étudiants : gestion des événements, billetterie en ligne, fil d'actualités et notifications push.",
+      descLong: [
+        "Application mobile cross-platform développée avec React Native et Expo pour le Bureau Des Étudiants du lycée Gustave Eiffel.",
+        "Les étudiants peuvent s'inscrire aux événements, recevoir des notifications push et consulter le fil d'actualités du BDE en temps réel."
+      ],
+      missions: [
+        "Développement de l'application React Native avec Expo",
+        "Intégration de Firebase Authentication et Firestore",
+        "Mise en place des notifications push via Firebase Cloud Messaging",
+        "Développement du module de billetterie en ligne",
+        "Tests sur iOS et Android, correction des bugs cross-platform"
+      ],
+      tech:     ["React Native", "Firebase", "Expo"],
+      annee:    "2024",
+      duree:    "7 semaines",
+      contexte: "Projet BTS SIO",
+      pdfs: [
+        // { name: "Rapport de projet",       file: "projets/bde/rapport.pdf" },
+        // { name: "Cahier des charges",      file: "projets/bde/cahier-des-charges.pdf" },
+        // { name: "Annexes / captures",      file: "projets/bde/annexes.pdf" },
+        // { name: "Support de présentation", file: "projets/bde/presentation.pdf" },
+      ]
+    },
+
+    "api-rh": {
+      section:  "Réalisations professionnelles",
+      badge:    "API",
+      icon:     "🌐",
+      title:    "API REST — Gestion RH",
+      desc:     "Conception d'une API RESTful pour un module de gestion des ressources humaines : congés, fiches de paie, organigramme. Documentation Swagger complète.",
+      descLong: [
+        "API RESTful développée avec Laravel pour gérer les ressources humaines d'une entreprise fictive : gestion des employés, des congés, des fiches de paie et de l'organigramme.",
+        "L'authentification est assurée par JWT. La documentation Swagger est générée automatiquement depuis les annotations du code et accessible via une interface dédiée."
+      ],
+      missions: [
+        "Conception de l'architecture de l'API REST avec Laravel",
+        "Mise en place de l'authentification sécurisée par JWT",
+        "Développement des endpoints (employés, congés, fiches de paie)",
+        "Rédaction de la documentation technique Swagger / OpenAPI",
+        "Tests unitaires et tests d'intégration"
+      ],
+      tech:     ["Laravel", "MySQL", "JWT", "Swagger"],
+      annee:    "2024",
+      duree:    "5 semaines",
+      contexte: "Projet BTS SIO",
+      pdfs: [
+        // { name: "Rapport de projet",       file: "projets/api-rh/rapport.pdf" },
+        // { name: "Cahier des charges",      file: "projets/api-rh/cahier-des-charges.pdf" },
+        // { name: "Annexes / captures",      file: "projets/api-rh/annexes.pdf" },
+        // { name: "Documentation Swagger",   file: "projets/api-rh/presentation.pdf" },
+      ]
+    }, 
+
+    /* ════════════════════════════════════════════════════
+       STAGES
+    ════════════════════════════════════════════════════ */
+
+    "stage-cimpa": {
+      section:  "Stages",
+      badge:    "Stage 1ère année",
+      icon:     "🏢",
+      title:    "Développeur Web Stagiaire — CIMPA / Sopra Steria",
+      desc:     "Stage de fin de première année au sein de la DSI d'une entreprise spécialisée dans l'ingénierie. Participation active au développement d'un nouvel intranet.",
+      descLong: [
+        "Stage réalisé chez CIMPA, filiale de Sopra Steria spécialisée dans les services d'ingénierie industrielle. Intégré à l'équipe DSI de Saint-Aubin de Médoc pendant 6 semaines.",
+        "J'ai participé activement au développement d'un nouvel intranet d'entreprise, en travaillant sur des modules PHP de gestion des stocks et en créant des interfaces utilisateurs complètes."
+      ],
+      missions: [
+        "Développement de modules PHP pour la gestion des stocks",
+        "Création d'interfaces utilisateurs en HTML / CSS / JavaScript",
+        "Développement de scripts d'automatisation en PowerShell",
+        "Participation aux réunions Agile / Scrum hebdomadaires",
+        "Rédaction de la documentation technique des modules livrés"
+      ],
+      tech:     ["PHP", "MySQL", "HTML / CSS", "JavaScript", "PowerShell"],
+      annee:    "2025",
+      duree:    "6 semaines",
+      contexte: "Saint-Aubin de Médoc, France",
+      pdfs: [
+        // ── Documents globaux ──────────────────────────
+        // { name: "Rapport de stage complet", file: "stages/cimpa/rapport-de-stage.pdf" },
+        // { name: "Attestation de stage",     file: "stages/cimpa/attestation.pdf" },
+        // ── Rapports hebdomadaires ─────────────────────
+         { name: "Rapport — Semaine 1",      file: "stages/cimpa/Stage_Semaine1_PYRCZAK_Noah.pdf" },
+         { name: "Rapport — Semaine 2",      file: "stages/cimpa/Stage_Semaine2_PYRCZAK_Noah.pdf" },
+         { name: "Rapport — Semaine 3",      file: "stages/cimpa/Stage_Semaine3_PYRCZAK_Noah.pdf" },
+         { name: "Rapport — Semaine 4",      file: "stages/cimpa/Stage_Semaine4_PYRCZAK_Noah.pdf" },
+         { name: "Rapport — Semaine 5",      file: "stages/cimpa/Stage_Semaine5_PYRCZAK_Noah.pdf" },
+         { name: "CIMPA — Sopra-Stéria",      file: "stages/cimpa/Contexte_CIMPA_SaintAubin_Medoc.pdf" },
+      ]
+    },
+
+    "stage-inrae": {
+      section:  "Stages",
+      badge:    "Stage 2ème année",
+      icon:     "🔬",
+      title:    "Informaticien de Proximité — INRAE",
+      desc:     "Stage de deuxième année au sein d'un organisme de recherche spécialisé dans l'étude des abeilles. Configuration NAS, isolement réseau, support utilisateurs.",
+      descLong: [
+        "Stage réalisé à l'INRAE d'Avignon, organisme national de recherche agronomique spécialisé dans l'étude des pollinisateurs. Intégré au service informatique de proximité pendant 8 semaines.",
+        "Les missions couvraient l'administration système (NAS Synology, déploiement de postes), la mise en réseau (isolement via NanoPi R5S) et l'assistance quotidienne aux chercheurs."
+      ],
+      missions: [
+        "Configuration et administration de NAS (Network Attached Storage)",
+        "Mise en place d'une solution d'isolement réseau à l'aide d'un NanoPi R5S",
+        "Assistance technique et support aux utilisateurs",
+        "Configuration intégrale de postes (installation Windows 11, logiciels métier)",
+        "Rédaction de rapports hebdomadaires et de documentation interne"
+      ],
+      tech:     ["IP / Réseau", "NAS Synology", "NanoPi", "Windows 11", "Support N1"],
+      annee:    "2026",
+      duree:    "8 semaines",
+      contexte: "Avignon, France",
+      pdfs: [
+        // ── Documents globaux ──────────────────────────
+        // { name: "Rapport de stage complet", file: "stages/inrae/rapport-de-stage.pdf" },
+        // { name: "Attestation de stage",     file: "stages/inrae/attestation.pdf" },
+        // ── Rapports hebdomadaires ─────────────────────
+        { name: "Rapport — Semaine 1",        file: "stages/inrae/semaine1.pdf" },
+         { name: "Rapport — Semaine 2",      file: "stages/inrae/semaine2.pdf" },
+         { name: "Rapport — Semaine 3",      file: "stages/inrae/semaine3.pdf" },
+         { name: "Rapport — Semaine 4",      file: "stages/inrae/semaine4.pdf" },
+         { name: "Rapport — Semaine 5",      file: "stages/inrae/semaine5.pdf" },
+         { name: "Rapport — Semaine 6",      file: "stages/inrae/semaine6.pdf" },
+         { name: "Rapport — Semaine 7",      file: "stages/inrae/semaine7.pdf" },
+         { name: "Rapport — Semaine 8",      file: "stages/inrae/semaine8.pdf" },
+      ]
+    }
+
+  };
+  </script>
+
+  <script>
+  document.getElementById('navBurger').addEventListener('click', () =>
+    document.getElementById('navLinks').classList.toggle('open'));
+  document.querySelectorAll('.nav-links a').forEach(a =>
+    a.addEventListener('click', () =>
+      document.getElementById('navLinks').classList.remove('open')));
+
+  function getParam(name) {
+    return new URLSearchParams(window.location.search).get(name);
+  }
+
+  function renderPdfList(pdfs) {
+    const container = document.getElementById('pdfListContainer');
+    if (!pdfs || pdfs.length === 0) {
+      container.innerHTML = `
+        <div class="pdf-empty">
+          Aucun document PDF renseigné pour ce projet.<br>
+          Retire le <code>//</code> devant les lignes souhaitées dans le tableau <code>PROJETS</code>.
+        </div>`;
+      return;
+    }
+    container.innerHTML =
+      '<div class="pdf-list">' +
+      pdfs.map(pdf => `
+        <a href="${pdf.file}" target="_blank" rel="noopener" class="pdf-item">
+          <span class="pdf-item-icon">📄</span>
+          <div class="pdf-item-info">
+            <div class="pdf-item-name">${pdf.name}</div>
+            <div class="pdf-item-sub">Ouvre dans un nouvel onglet</div>
+          </div>
+          <span class="pdf-item-arrow">↗</span>
+        </a>`).join('') +
+      '</div>';
+  }
+
+  function init() {
+    const id   = getParam('id');
+    const data = id && PROJETS[id];
+
+    if (!data) {
+      document.getElementById('heroTitle').textContent       = 'Projet introuvable';
+      document.getElementById('heroDesc').textContent        = 'Aucun projet ne correspond à cet identifiant.';
+      document.getElementById('heroBadge').textContent       = '—';
+      document.getElementById('heroIcon').textContent        = '❓';
+      document.getElementById('breadcrumbTitle').textContent = 'Inconnu';
+      document.getElementById('pdfListContainer').innerHTML  = '<div class="pdf-empty">Projet non trouvé.</div>';
+      return;
+    }
+
+    document.title = data.title + ' — Noah PYRCZAK';
+    document.getElementById('breadcrumbSection').textContent = data.section;
+    document.getElementById('breadcrumbTitle').textContent   = data.title;
+    document.getElementById('heroBadge').textContent         = data.badge;
+    document.getElementById('heroIcon').textContent          = data.icon;
+    document.getElementById('heroTitle').textContent         = data.title;
+    document.getElementById('heroDesc').textContent          = data.desc;
+    document.getElementById('heroMeta').innerHTML            =
+      data.tech.map(t => `<span class="projet-hero-tag">${t}</span>`).join('') +
+      `<span class="projet-hero-date">${data.annee}</span>`;
+
+    document.getElementById('descriptionContent').innerHTML =
+      (data.descLong || [data.desc]).map(p => `<p>${p}</p>`).join('');
+
+    document.getElementById('missionsContent').innerHTML =
+      (data.missions || []).map(m => `<li>${m}</li>`).join('');
+
+    document.getElementById('sidebarInfos').innerHTML = `
+      <div class="sidebar-info-item">
+        <span class="sidebar-info-label">Année</span>
+        <span class="sidebar-info-value">${data.annee}</span>
+      </div>
+      <div class="sidebar-info-item">
+        <span class="sidebar-info-label">Durée</span>
+        <span class="sidebar-info-value">${data.duree}</span>
+      </div>
+      <div class="sidebar-info-item">
+        <span class="sidebar-info-label">Contexte</span>
+        <span class="sidebar-info-value">${data.contexte}</span>
+      </div>`;
+
+    document.getElementById('sidebarTech').innerHTML =
+      data.tech.map(t => `<span class="sidebar-tech">${t}</span>`).join('');
+
+    renderPdfList(data.pdfs);
+  }
+
+  init();
+  </script>
+
+</body>
+</html>
