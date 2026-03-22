@@ -92,7 +92,7 @@
     <div class="footer-socials">
       <a href="https://github.com" class="footer-social" target="_blank" rel="noopener" title="GitHub">&#x1F431;</a>
       <a href="https://linkedin.com" class="footer-social" target="_blank" rel="noopener" title="LinkedIn">&#x1F4BC;</a>
-      <a href="mailto:ton.email@exemple.com" class="footer-social" title="Email">&#x2709;&#xFE0F;</a>
+      <a href="mailto:n.pyrczak15@gmail.com" class="footer-social" title="Email">&#x2709;&#xFE0F;</a>
     </div>
   </footer>
 
@@ -167,33 +167,33 @@
     /* ════════════════════════════════════════════════════
        RÉALISATIONS PROFESSIONNELLES
     ════════════════════════════════════════════════════ */
-    /*
-    "ecommerce": {
+    
+    "GPopu": {
       section:  "Réalisations professionnelles",
-      badge:    "Web",
-      icon:     "🛒",
-      title:    "Site E-commerce",
-      desc:     "Développement complet d'une boutique en ligne avec gestion des produits, panier, commandes et espace administrateur. Interface responsive et sécurisée.",
+      badge:    "Réseau & Système",
+      icon:     "🖧",
+      title:    "AP GPoPu",
+      desc:     "Migration d'un contrôleur de domaine Windows Server 2012 vers 2016, déploiement de services réseau (DNS, DHCP, NTP), GPO et connexions sans-fil sécurisées.",
       descLong: [
-        "Ce projet a été réalisé dans le cadre du BTS SIO. Il s'agit d'un site e-commerce complet permettant la gestion d'un catalogue produits, d'un panier d'achat et d'un système de commande.",
-        "Un espace administrateur sécurisé permet la gestion des stocks, des commandes et des utilisateurs. L'interface est entièrement responsive et compatible mobile."
+        "Ce projet a été réalisé dans le cadre du BTS SIO SISR (AP3.1) pour le contexte GSB. Il s'agit de migrer le serveur LABANNU vers Windows Server 2016 et de redimensionner l'infrastructure réseau via une maquette de validation avant déploiement en production.",
+        "Le projet inclut la mise en place de GPO optimisées par service (RH, Dev, Rédaction, Commercial), le déploiement de services DNS primaire/secondaire, DHCP centralisé, NTP, ainsi que des connexions sans-fil sécurisées en WPA3 pour les commerciaux, admins RS et développeurs. La migration des utilisateurs et groupes est automatisée via des scripts PowerShell."
       ],
       missions: [
-        "Conception de la base de données MySQL (produits, commandes, utilisateurs)",
-        "Développement du back-end en PHP (architecture MVC maison)",
-        "Création de l'interface utilisateur HTML / CSS / JavaScript",
-        "Mise en place d'un système d'authentification sécurisé",
-        "Intégration d'un espace administrateur complet"
+        "Préparation du contrôleur de domaine sous Windows Server 2016 (PDC gsb.local)",
+        "Conception et déploiement des GPO par service (RH, Dev, Rédaction, Commercial)",
+        "Automatisation de la migration des utilisateurs et groupes via scripts PowerShell (CSV)",
+        
       ],
-      tech:     ["PHP", "MySQL", "JavaScript", "CSS", "HTML"],
-      annee:    "2024",
-      duree:    "8 semaines",
-      contexte: "Projet BTS SIO",
+      tech:     ["Windows Server 2016", "Active Directory", "PowerShell", "pfSense", "Debian 12", "DNS/DHCP/NTP", "GPO", "WPA3"],
+      annee:    "2025",
+      duree:    "20 heures (5 séances)",
+      contexte: "Projet BTS SIO SISR - AP3.1 - Équipe de 4 étudiants",
       pdfs: [
-        // { name: "Rapport de projet",       file: "projets/ecommerce/rapport.pdf" },
-        // { name: "Cahier des charges",      file: "projets/ecommerce/cahier-des-charges.pdf" },
-        // { name: "Annexes / captures",      file: "projets/ecommerce/annexes.pdf" },
-        // { name: "Support de présentation", file: "projets/ecommerce/presentation.pdf" },
+         { name: "Fiche de RP",                file: "projets/gpopu/Fiche de RP PYRCZAK Noah.pdf" },
+         { name: " Détails GPO",                     file: "projets/gpopu/PYRCZAK Noah GPO.pdf" },
+         { name: " Script Utilisateurs PowerShell",    file: "projets/gpopu/PYRCZAK Noah PowerShell.pdf" },
+         { name: "Sauvegarde par GPO",                file: "projets/gpopu/PYRCZAK Noah Sauvegarde.pdf" },
+         { name: "Tableau GPO",                     file: "projets/gpopu/GPO.png" },
       ]
     },
 
@@ -284,32 +284,34 @@
       ]
     },
 
-    "bde": {
+    "NanoPi": {
       section:  "Réalisations professionnelles",
-      badge:    "Mobile",
+      badge:    "ArmBian",
       icon:     "📱",
-      title:    "Application Mobile BDE",
-      desc:     "Application mobile pour le Bureau Des Étudiants : gestion des événements, billetterie en ligne, fil d'actualités et notifications push.",
+      title:    "NanoPi",
+      desc:     "Isolation d'un poste sous Windows XP pour prévenir des possibles cyber-attaques",
       descLong: [
-        "Application mobile cross-platform développée avec React Native et Expo pour le Bureau Des Étudiants du lycée Gustave Eiffel.",
-        "Les étudiants peuvent s'inscrire aux événements, recevoir des notifications push et consulter le fil d'actualités du BDE en temps réel."
+        "Dans le cadre de la politique de sécurité de la DSI de l'INRAE, tous les postes du domaine doivent être maintenus à jour afin de limiter les risques de vulnérabilités.",
+        "Le laboratoire de toxicologie utilise toutefois un équipement reposant sur un logiciel spécifique, incompatible avec les systèmes récents et trop coûteux à mettre à jour. Le poste concerné doit donc rester sous Windows XP SP3.",
+        "Pour des raisons de sécurité, la DSI impose alors son retrait du domaine et du réseau, ce qui complique l'accès à distance et le transfert des données vers un partage réseau.",
+        "Cette situation met en évidence la nécessité de concilier sécurité informatique et contraintes techniques."
       ],
       missions: [
-        "Développement de l'application React Native avec Expo",
-        "Intégration de Firebase Authentication et Firestore",
-        "Mise en place des notifications push via Firebase Cloud Messaging",
-        "Développement du module de billetterie en ligne",
-        "Tests sur iOS et Android, correction des bugs cross-platform"
+        "Isolement du poste XP : Le PC sous Windows XP ne doit pas pouvoir initier de connexions vers l'extérieur (Internet).",
+        "Accès distant sécurisé : Permettre à un administrateur depuis le LAN d'accéder au bureau du PC isolé via le protocole RDP (Remote Desktop Protocol).",
+        "Partage de fichiers : Autoriser le PC isolé à accéder à un partage réseau (NAS) situé sur le LAN (147.100.6.7) pour l'échange de données, sans compromettre son isolement.",
+        "Maintenabilité : Proposer une solution robuste, documentée et contrôlable, via l'interface Webmin, tout en maîtrisant la configuration de bas niveau avec nftables.",
+        
       ],
-      tech:     ["React Native", "Firebase", "Expo"],
-      annee:    "2024",
-      duree:    "7 semaines",
-      contexte: "Projet BTS SIO",
+      tech:     ["Cybersécurité", "Réseau", "NFtables"],
+      annee:    "2026",
+      duree:    "1 semaines",
+      contexte: "Projet Stage INRAE",
       pdfs: [
-        // { name: "Rapport de projet",       file: "projets/bde/rapport.pdf" },
-        // { name: "Cahier des charges",      file: "projets/bde/cahier-des-charges.pdf" },
-        // { name: "Annexes / captures",      file: "projets/bde/annexes.pdf" },
-        // { name: "Support de présentation", file: "projets/bde/presentation.pdf" },
+         { name: "Fiche RP NanoPi",       file: "projets/NanoPi/E5 Fiche de RP NanoPi.pdf" },
+         { name: "Contexte et Installation",      file: "projets/NanoPi/Projet-NanoPi.pdf" },
+         { name: "Doc Technique",      file: "projets/NanoPi/Documentation Technique du Projet NanoPi.pdf" },
+        
       ]
     },
 
@@ -407,14 +409,16 @@
         // { name: "Rapport de stage complet", file: "stages/inrae/rapport-de-stage.pdf" },
         // { name: "Attestation de stage",     file: "stages/inrae/attestation.pdf" },
         // ── Rapports hebdomadaires ─────────────────────
-        { name: "Rapport — Semaine 1",        file: "stages/inrae/semaine1.pdf" },
-         { name: "Rapport — Semaine 2",      file: "stages/inrae/semaine2.pdf" },
-         { name: "Rapport — Semaine 3",      file: "stages/inrae/semaine3.pdf" },
-         { name: "Rapport — Semaine 4",      file: "stages/inrae/semaine4.pdf" },
-         { name: "Rapport — Semaine 5",      file: "stages/inrae/semaine5.pdf" },
-         { name: "Rapport — Semaine 6",      file: "stages/inrae/semaine6.pdf" },
-         { name: "Rapport — Semaine 7",      file: "stages/inrae/semaine7.pdf" },
-         { name: "Rapport — Semaine 8",      file: "stages/inrae/semaine8.pdf" },
+        { name: "Rapport — Semaine 1",        file: "stages/inrae/Rapport_stage_Semaine_1_Noah.pdf" },
+         { name: "Rapport — Semaine 2",      file: "stages/inrae/Rapport_stage_Semaine_2_Noah.pdf" },
+         { name: "Rapport — Semaine 3",      file: "stages/inrae/Rapport_stage_Semaine_3_Noah.pdf" },
+         { name: "Rapport — Semaine 4",      file: "stages/inrae/Rapport_stage_Semaine_4_Noah.pdf" },
+         { name: "Rapport — Semaine 5",      file: "stages/inrae/Rapport_stage_Semaine_5_Noah.pdf" },
+         { name: "Rapport — Semaine 6",      file: "stages/inrae/Rapport_stage_Semaine_6_Noah.pdf" },
+         { name: "Rapport — Semaine 7",      file: "stages/inrae/Rapport_stage_Semaine_7_Noah.pdf" },
+         { name: "Rapport — Semaine 8",      file: "stages/inrae/Rapport_stage_Semaine_8_Noah.pdf" },
+         { name: "INRAE — Contexte",      file: "stages/inrae/Fiche contexte INRAE-Stage.pdf" },
+         { name: "INRAE — Fiche RP — NanoPi",      file: "stages/inrae/E5 Fiche de RP NanoPi.pdf" },
       ]
     }
 
