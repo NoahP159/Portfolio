@@ -197,92 +197,94 @@
       ]
     },
 
-    "kanban": {
+    "FlexOffice": {
       section:  "Réalisations professionnelles",
-      badge:    "Application",
-      icon:     "📋",
-      title:    "Gestion de Tâches Kanban",
-      desc:     "Application web de gestion de projet avec tableau Kanban, assignation des tâches, suivi du temps et notifications en temps réel via WebSocket.",
+      badge:    "Scripting & Système",
+      icon:     "💾",
+      title:    "AP FlexOffice",
+      desc:     "Mise en place d'une solution de portabilité des données utilisateurs en Flex Office : scripts de sauvegarde, restauration, nettoyage et archivage automatisés.",
       descLong: [
-        "Application web de gestion de projet inspirée de Trello. Les utilisateurs peuvent créer des tableaux, des colonnes et des cartes, et les déplacer par drag & drop.",
-        "Les notifications en temps réel sont gérées via Socket.io, permettant une collaboration multi-utilisateurs instantanée."
+        "Ce projet a été réalisé dans le cadre du BTS SIO SISR (AP2.3) pour le contexte GSB. Face à la généralisation du télétravail et des bureaux partagés (Flex Office), l'objectif est d'assurer la portabilité des documents personnels des utilisateurs entre les postes Windows 10.",
+        "La solution repose sur des scripts PowerShell (ouverture/fermeture de session, nettoyage des postes) et des scripts Bash sur un serveur Debian (archivage hebdomadaire via Crontab). Un serveur FTP VsFTPd héberge les sauvegardes et archives de chaque utilisateur sur une partition dédiée de 5 Go."
       ],
       missions: [
-        "Développement de l'interface React avec drag & drop natif",
-        "Mise en place du serveur Node.js et de l'API REST",
-        "Intégration de Socket.io pour les mises à jour en temps réel",
-        "Conception du schéma de base de données PostgreSQL",
-        "Gestion des rôles et permissions utilisateurs"
-      ],
-      tech:     ["React", "Node.js", "PostgreSQL", "Socket.io"],
-      annee:    "2024",
-      duree:    "6 semaines",
-      contexte: "Projet BTS SIO",
+  "Rédaction de la fiche de réalisation professionnelle (FRP) du projet FlexOffice",
+  "Conception et documentation du schéma réseau logique de l'infrastructure",
+  "Conception et documentation du schéma réseau physique de l'infrastructure",
+  "Développement du script PowerShell de fermeture de session avec planification associée",
+  "Rédaction du plan de tests unitaires du script de fermeture de session"
+],
+      tech:     ["PowerShell", "Bash", "Debian 11", "VsFTPd", "Windows 10", "Crontab", "FTP"],
+      annee:    "2025",
+      duree:    "12 heures (3 séances)",
+      contexte: "Projet BTS SIO SISR – AP2.3 – Équipe de 3 à 4 étudiants",
       pdfs: [
-        // { name: "Rapport de projet",       file: "projets/kanban/rapport.pdf" },
-        // { name: "Cahier des charges",      file: "projets/kanban/cahier-des-charges.pdf" },
-        // { name: "Annexes / captures",      file: "projets/kanban/annexes.pdf" },
-        // { name: "Support de présentation", file: "projets/kanban/presentation.pdf" },
+         { name: "Fiche RP",         file: "projets/flexoffice/FRP FlexOffice.pdf" },
+         { name: "Planification Script Fermeture",  file: "projets/flexoffice/Planification script de fermeture.pdf" },
+         { name: "TEST Fermeture de Session",       file: "projets/flexoffice/TEST Fermeture de Session.pdf" },
+         { name: "Script Fermeturee de Session",              file: "projets/flexoffice/Script de fermeture de session.ps1" },
+         { name: "Schéma réseau physique",              file: "projets/flexoffice/Schéma réseau physique.pdf" },
+         { name: "Schéma réseau logique",              file: "projets/flexoffice/Schéma réseau logique.pdf" },
       ]
     },
 
-    "audit": {
-      section:  "Réalisations professionnelles",
-      badge:    "Sécurité",
-      icon:     "🔐",
-      title:    "Audit de Sécurité Réseau",
-      desc:     "Analyse des vulnérabilités d'une infrastructure réseau d'entreprise. Rapport complet avec recommandations, tests de pénétration et solutions correctives.",
-      descLong: [
-        "Audit de sécurité réalisé sur une infrastructure réseau fictive d'entreprise dans le cadre d'un exercice BTS SIO SISR.",
-        "L'audit couvre la cartographie du réseau, l'identification des services exposés, les tests d'intrusion et la rédaction d'un rapport de recommandations OWASP."
-      ],
-      missions: [
-        "Cartographie complète du réseau avec Nmap",
-        "Analyse du trafic réseau avec Wireshark",
-        "Tests de pénétration sur environnement Kali Linux isolé",
-        "Rédaction du rapport d'audit avec recommandations OWASP",
-        "Présentation des résultats et des correctifs proposés"
-      ],
-      tech:     ["Nmap", "Wireshark", "Kali Linux", "OWASP"],
-      annee:    "2023",
-      duree:    "4 semaines",
-      contexte: "Projet BTS SIO SISR",
-      pdfs: [
-        // { name: "Rapport d'audit complet", file: "projets/audit/rapport.pdf" },
-        // { name: "Cahier des charges",      file: "projets/audit/cahier-des-charges.pdf" },
-        // { name: "Annexes / captures",      file: "projets/audit/annexes.pdf" },
-        // { name: "Support de présentation", file: "projets/audit/presentation.pdf" },
-      ]
-    },
+    "supervision-services": {
+  section:  "Réalisations professionnelles",
+  badge:    "Stage",
+  icon:     "⚙️",
+  title:    "Script de Supervision de Services Windows",
+  desc:     "Développement d'un script PowerShell de surveillance automatique des services critiques Windows. Détection des arrêts, relance automatique et génération d'un rapport horodaté.",
+  descLong: [
+    "Script PowerShell développé en autonomie lors de la semaine 3 de stage chez CIMPA – Sopra Steria.",
+    "Le script surveille 14 services critiques (IIS, SQL Server, DNS, RDP, etc.), détecte ceux qui sont arrêtés, tente de les relancer automatiquement et génère un rapport horodaté sur le Bureau."
+  ],
+  missions: [
+    "Identification et recensement des services critiques Windows à surveiller",
+    "Développement du script de vérification et relance automatique avec PowerShell",
+    "Gestion des erreurs avec blocs try/catch et journalisation des incidents",
+    "Génération d'un fichier de rapport horodaté (UTF-8) sur le Bureau",
+    "Tests et validation du script sur machine virtuelle Windows"
+  ],
+  tech:     ["PowerShell", "Windows Server", "Machine Virtuelle"],
+  annee:    "2025",
+  duree:    "1 semaine",
+  contexte: "Stage – CIMPA (Sopra Steria)",
+  pdfs: [
+     { name: "Fiche de réalisation professionnelle", file: "projets/supervision-services/Fiche RP Stage Powershell.pdf" },
+     { name: "Explication Script",          file: "projets/supervision-services/Script_PowerShell_Explication.pdf" },
+     { name: "Script PowerShell Commenté",           file: "projets/supervision-services/Script supervision services.ps1" },
+  ]
+},
 
-    "dashboard": {
-      section:  "Réalisations professionnelles",
-      badge:    "Dashboard",
-      icon:     "📊",
-      title:    "Dashboard Analytics PME",
-      desc:     "Tableau de bord de visualisation de données pour une PME : graphiques interactifs, KPI en temps réel, exports et système d'alertes configurables.",
-      descLong: [
-        "Tableau de bord développé pour permettre à une PME de visualiser ses indicateurs clés de performance (KPI) en temps réel.",
-        "L'application Django expose une API REST consommée par des graphiques Chart.js. Un système d'alertes par e-mail est configurable depuis l'interface d'administration."
-      ],
-      missions: [
-        "Conception et développement de l'application Django",
-        "Intégration des graphiques interactifs avec Chart.js",
-        "Développement du système d'alertes configurable par seuils",
-        "Mise en place des exports CSV et PDF",
-        "Optimisation des requêtes SQLite pour les gros volumes"
-      ],
-      tech:     ["Python", "Django", "Chart.js", "SQLite"],
-      annee:    "2023",
-      duree:    "5 semaines",
-      contexte: "Projet BTS SIO",
-      pdfs: [
-        // { name: "Rapport de projet",       file: "projets/dashboard/rapport.pdf" },
-        // { name: "Cahier des charges",      file: "projets/dashboard/cahier-des-charges.pdf" },
-        // { name: "Annexes / captures",      file: "projets/dashboard/annexes.pdf" },
-        // { name: "Support de présentation", file: "projets/dashboard/presentation.pdf" },
-      ]
-    },
+    "collecte-logs": {
+  section:  "Réalisations professionnelles",
+  badge:    "Stage",
+  icon:     "📂",
+  title:    "Collecte automatique de fichiers LOG",
+  desc:     "Script PowerShell de centralisation des fichiers .LOG issus de l'application TeamCenter sur plusieurs serveurs distants, avec archivage ZIP horodaté.",
+  descLong: [
+    "Script PowerShell développé lors de la semaine 1 de stage chez CIMPA – Sopra Steria.",
+    "Le script parcourt automatiquement trois serveurs distants (TC Server, Apache, Tomcat), copie tous les fichiers .LOG dans un dossier centralisé sur le Bureau, puis génère une archive ZIP horodatée pour archivage."
+  ],
+  missions: [
+    "Identification des serveurs et chemins de logs (TC Server, Apache, Tomcat)",
+    "Développement du script de copie automatique de fichiers .LOG locaux",
+    "Adaptation du script pour la récupération multi-serveur via chemins UNC",
+    "Recherche sur l'accès distant PowerShell (WinRM, Enter-PSSession, Invoke-Command)",
+    "Génération d'une archive ZIP horodatée pour archivage des logs collectés",
+    "Rédaction d'un mini-guide utilisateur et captures d'écran d'exécution"
+  ],
+  tech:     ["PowerShell", "WinRM", "TeamCenter", "Windows Server"],
+  annee:    "2025",
+  duree:    "3 jours (semaine écourtée – pont Ascension)",
+  contexte: "Stage – CIMPA (Sopra Steria)",
+  pdfs: [
+     { name: "Fiche RP",   file: "projets/collecte-logs/Fiche RP Stage PowerShell 2.pdf" },
+     { name: "Explication Script  ", file: "projets/collecte-logs/Script_Collecte_Logs_Explication.pdf" },
+     { name: "Script PowerShell commenté", file: "projets/collecte-logs/Code collecte Logs.ps1" },
+    // { name: "Mini-guide utilisateur",      file: "projets/collecte-logs/guide.pdf" },
+  ]
+},
 
     "NanoPi": {
       section:  "Réalisations professionnelles",
@@ -386,7 +388,7 @@
     "stage-inrae": {
       section:  "Stages",
       badge:    "Stage 2ème année",
-      icon:     "🔬",
+      icon:     "🐝",
       title:    "Informaticien de Proximité — INRAE",
       desc:     "Stage de deuxième année au sein d'un organisme de recherche spécialisé dans l'étude des abeilles. Configuration NAS, isolement réseau, support utilisateurs.",
       descLong: [
