@@ -445,3 +445,32 @@ footer { background: var(--text); padding: 3rem clamp(1.5rem, 8vw, 8rem); displa
   .pdf-list { padding: 1rem; }
   .pdf-empty { margin: 1rem; }
 }
+
+/* Tableau de Synthèse — accent distinct */
+.doc-card-synthese {
+  border-color: rgba(217, 119, 6, 0.3);
+}
+.doc-card-synthese:hover {
+  border-color: var(--gold);
+  box-shadow: 0 12px 32px rgba(217, 119, 6, 0.18);
+}
+.doc-card-synthese::after {
+  background: linear-gradient(90deg, var(--gold), #f59e0b);
+}
+.pdf-link-synthese {
+  color: var(--gold);
+  border-color: rgba(217, 119, 6, 0.3);
+  background: #fef3c7;
+}
+.pdf-link-synthese:hover {
+  background: var(--gold);
+  color: #fff;
+}
+.btn-synthese {
+  color: var(--gold) !important;
+  border-color: var(--gold) !important;
+}
+.btn-synthese:hover {
+  background: var(--gold) !important;
+  color: #fff !important;
+}

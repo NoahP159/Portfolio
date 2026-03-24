@@ -228,6 +228,8 @@
       ]
     },
 
+    
+
     "supervision-services": {
   section:  "Réalisations professionnelles",
   badge:    "Stage",
@@ -250,7 +252,7 @@
   duree:    "1 semaine",
   contexte: "Stage – CIMPA (Sopra Steria)",
   pdfs: [
-     { name: "Fiche de réalisation professionnelle", file: "projets/supervision-services/Fiche RP Stage Powershell.pdf" },
+     { name: "Fiche RP", file: "projets/supervision-services/Fiche RP Stage Powershell.pdf" },
      { name: "Explication Script",          file: "projets/supervision-services/Script_PowerShell_Explication.pdf" },
      { name: "Script PowerShell Commenté",           file: "projets/supervision-services/Script supervision services.ps1" },
   ]
@@ -313,38 +315,43 @@
          { name: "Fiche RP NanoPi",       file: "projets/NanoPi/E5 Fiche de RP NanoPi.pdf" },
          { name: "Contexte et Installation",      file: "projets/NanoPi/Projet-NanoPi.pdf" },
          { name: "Doc Technique",      file: "projets/NanoPi/Documentation Technique du Projet NanoPi.pdf" },
+         { name: "Schéma NanoPi",      file: "projets/NanoPi/Schéma_NanoPi.pdf" },
         
       ]
     },
 
-    "api-rh": {
-      section:  "Réalisations professionnelles",
-      badge:    "API",
-      icon:     "🌐",
-      title:    "API REST — Gestion RH",
-      desc:     "Conception d'une API RESTful pour un module de gestion des ressources humaines : congés, fiches de paie, organigramme. Documentation Swagger complète.",
-      descLong: [
-        "API RESTful développée avec Laravel pour gérer les ressources humaines d'une entreprise fictive : gestion des employés, des congés, des fiches de paie et de l'organigramme.",
-        "L'authentification est assurée par JWT. La documentation Swagger est générée automatiquement depuis les annotations du code et accessible via une interface dédiée."
-      ],
-      missions: [
-        "Conception de l'architecture de l'API REST avec Laravel",
-        "Mise en place de l'authentification sécurisée par JWT",
-        "Développement des endpoints (employés, congés, fiches de paie)",
-        "Rédaction de la documentation technique Swagger / OpenAPI",
-        "Tests unitaires et tests d'intégration"
-      ],
-      tech:     ["Laravel", "MySQL", "JWT", "Swagger"],
-      annee:    "2024",
-      duree:    "5 semaines",
-      contexte: "Projet BTS SIO",
-      pdfs: [
-        // { name: "Rapport de projet",       file: "projets/api-rh/rapport.pdf" },
-        // { name: "Cahier des charges",      file: "projets/api-rh/cahier-des-charges.pdf" },
-        // { name: "Annexes / captures",      file: "projets/api-rh/annexes.pdf" },
-        // { name: "Documentation Swagger",   file: "projets/api-rh/presentation.pdf" },
-      ]
-    }, 
+    "PortFolio": {
+  section:  "Réalisations professionnelles",
+  badge:    "Web",
+  icon:     "🌐",
+  title:    "AP Portfolio",
+  desc:     "Conception et mise en ligne d’un portfolio personnel dans le cadre du BTS SIO, permettant de présenter son profil, ses compétences et ses réalisations.",
+  
+  descLong: [
+    "Développement d’un portfolio web personnel accessible en ligne, servant de vitrine pour présenter l’ensemble des travaux réalisés durant le BTS SIO.",
+    "Le site comprend plusieurs rubriques : présentation personnelle, CV, réalisations professionnelles, stages et compétences. L’objectif est de valoriser le profil de l’étudiant pour la recherche de stage et d’emploi."
+  ],
+
+  missions: [
+    "Conception et structuration du site web (pages, menu, navigation)",
+    "Création d’une interface claire et responsive en HTML/CSS",
+    "Intégration des contenus : CV, présentation, réalisations",
+    "Mise en ligne du portfolio sur un hébergement web",
+    "Respect des bonnes pratiques (ergonomie, lisibilité, organisation)"
+  ],
+
+  tech:     ["HTML", "CSS", "JavaScript"],
+  annee:    "2025",
+  duree:    "2 semaines",
+  contexte: "Projet BTS SIO (AP1.3)",
+
+  pdfs: [
+    { name: "Fiche RP", file: "projets/portfolio/E5 Fiche de RP.pdf" },
+     { name: "Doc Portfolio", file: "projets/portfolio/Création du Portfolio.pdf" },
+     { name: "Sujet", file: "projets/portfolio/AP1.3Portfolio.pdf" },
+     { name: "Veille Informatique", file: "projets/portfolio/Veille_CloudGaming_PYRCZAK_Noah.pdf" },
+  ]
+},
 
     /* ════════════════════════════════════════════════════
        STAGES
